@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Maleek Patterson | UX Design + Research</title>
+  <meta name="description" content="Editorial luxury portfolio: UX strategy, research, and human-centered AI."/>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container nav">
+      <a class="brand" href="/">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Maleek Patterson</span>
+      </a>
+      <div class="navlinks">
+        <a href="/#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="#contact">Contact</a>
+        <label class="row" style="gap:10px">
+          <span class="meta">Light</span>
+          <input class="toggle" type="checkbox" onchange="toggleTheme(this)" aria-label="Toggle light mode" />
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <main class="container" style="padding:36px 0 90px">
+    <section class="hero">
+      <div>
+        <p class="kicker">UX Hybrid | Strategy | Ethics</p>
+        <h1 class="title">High-fashion clarity for high-stakes systems.</h1>
+        <p class="subtitle">Second-semester grad student at the University of Michigan-Flint (Human-Centered Design, Human-Centered AI). I design workflows where trust isn’t a vibe, it’s an interface.</p>
+        <div class="cta">
+          <a class="btn" href="#work">View work</a>
+          <a class="btn ghost" href="assets/downloads/Maleek_Patterson_Resume.pdf" target="_blank" rel="noreferrer">Download resume</a>
+        </div>
+        <p class="meta" style="margin-top:12px">Big tech + startups | Domain comfort: healthcare, civic media, AI explainability</p>
+      </div>
+      <div class="portrait">
+        <img src="assets/img/headshot.jpg" alt="Maleek Patterson headshot" />
+      </div>
+    </section>
+
+    <section id="work" style="margin-top:34px">
+      <div class="grid">
+        <article class="card">
+          <div class="media">
+            <img src="assets/img/heart-live-session.png" alt="HEART Clinic live session screen"/>
+          </div>
+          <div class="body">
+            <h3>HEART Clinic Documentation System</h3>
+            <p class="meta">Healthcare workflow • Human-centered AI • Supervisor oversight • Live session tracking</p>
+            <p>Browser-based documentation system for student clinicians. Unifies device data, structured session fields, and AI-assisted SOAP notes into one continuous flow.</p>
+            <div class="chips">
+              <span class="chip">Research</span>
+              <span class="chip">Flows</span>
+              <span class="chip">Prototyping</span>
+              <span class="chip">Responsible AI</span>
+            </div>
+            <div class="cta" style="margin-top:14px">
+              <a class="btn" href="work/heart-clinic.html">Case study</a>
+              <a class="btn ghost" href="https://resilient-otter-d9d647.netlify.app/" target="_blank" rel="noreferrer">Live prototype</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="media">
+            <div class="veil"></div>
+          </div>
+          <div class="body">
+            <h3>SpinSpotter</h3>
+            <p class="meta">Civic media literacy • NLP + XAI • Phrase-level spin detection</p>
+            <p>A concept for detecting “spin” inside articles (not just outlet bias charts) with explainable highlights, neutral rewrites, and perspective links.</p>
+            <div class="chips">
+              <span class="chip">Concept + Strategy</span>
+              <span class="chip">Lo-fi to Prototype</span>
+              <span class="chip">Evaluation</span>
+            </div>
+            <div class="cta" style="margin-top:14px">
+              <a class="btn" href="work/spinspotter.html">Case study</a>
+              <a class="btn ghost" href="https://wool-shred-49318596.figma.site/" target="_blank" rel="noreferrer">Prototype</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section style="margin-top:38px" class="card">
+      <div class="body">
+        <h3>Extras</h3>
+        <p class="meta">Small pieces. Sharp edges. No filler.</p>
+        <div class="row" style="justify-content:space-between; flex-wrap:wrap; gap:12px">
+          <a class="btn ghost" href="assets/downloads/HEART_Values_and_Politics.pdf" target="_blank" rel="noreferrer">Values & Politics (HEART)</a>
+          <a class="btn ghost" href="assets/downloads/SpinSpotter_Final_Paper.pdf" target="_blank" rel="noreferrer">SpinSpotter Final Paper</a>
+          <a class="btn ghost" href="assets/downloads/HEART_Competitive_Analysis.pdf" target="_blank" rel="noreferrer">Competitive Analysis (HEART)</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:36px" class="card">
+      <div class="body">
+        <h3>Contact</h3>
+        <p class="meta">Email works. LinkedIn works. Carrier pigeon is optional.</p>
+        <div class="cta">
+          <a class="btn" href="mailto:hello@maleekpatterson.com">Email</a>
+          <a class="btn ghost" href="#" onclick="alert('Drop your LinkedIn URL and I’ll wire it in.')">LinkedIn</a>
+          <a class="btn ghost" href="#" onclick="alert('Drop your GitHub URL and I’ll wire it in.')">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container" style="padding:0">
+        <div class="meta">© <span id="y"></span> Maleek Patterson • maleekpatterson.com</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // sync toggle state
+    const isLight = document.documentElement.classList.contains('light');
+    const t = document.querySelector('.toggle');
+    if(t) t.checked = isLight;
+  </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>About | Maleek Patterson</title>
+  <meta name="description" content="About Maleek Patterson: UX strategy, research, and human-centered AI."/>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span><span>Maleek Patterson</span></a>
+      <div class="navlinks">
+        <a href="index.html#work">Work</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="index.html#contact">Contact</a>
+        <label class="row" style="gap:10px">
+          <span class="meta">Light</span>
+          <input class="toggle" type="checkbox" onchange="toggleTheme(this)" aria-label="Toggle light mode" />
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <main class="container" style="padding-top:56px">
+    <section class="section grid" style="grid-template-columns: 1.1fr .9fr; gap:28px">
+      <div>
+        <div class="kicker">About</div>
+        <h1>Design that holds up under pressure.</h1>
+        <p class="subhead">
+          I’m <b>Maleek Patterson</b>, a second-semester grad student at the University of Michigan-Flint in <b>Human-Centered Design</b>,
+          concentrating on <b>Human-Centered AI</b>. I work at the intersection of UX research, product strategy, and responsible AI.
+        </p>
+        <div class="card" style="margin-top:18px">
+          <div class="row" style="justify-content:space-between; align-items:flex-start; gap:16px">
+            <div>
+              <div class="meta">What I optimize for</div>
+              <h3 style="margin-top:10px">Clarity, trust, and momentum.</h3>
+              <p class="meta" style="margin-top:10px">
+                If a system touches health, money, identity, or public discourse, the UX can’t be vibes-only.
+                I design workflows that make the right action obvious, and the wrong action hard.
+              </p>
+            </div>
+          </div>
+          <div class="tags" style="margin-top:16px">
+            <span class="pill">UX Research</span>
+            <span class="pill">Interaction Design</span>
+            <span class="pill">AI Product Strategy</span>
+            <span class="pill">Explainable AI</span>
+            <span class="pill">Ethics + Governance</span>
+          </div>
+        </div>
+
+        <div class="row" style="gap:12px; flex-wrap:wrap; margin-top:18px">
+          <a class="button" href="index.html#work">View work</a>
+          <a class="button secondary" href="resume.html">Resume</a>
+        </div>
+
+        <div class="meta" style="margin-top:18px">
+          Note: update the email address and resume PDF in <code>resume.html</code> when you’re ready.
+        </div>
+      </div>
+
+      <div>
+        <div class="card" style="overflow:hidden">
+          <img class="hero-photo" src="assets/img/headshot.jpg" alt="Headshot of Maleek Patterson"/>
+          <div style="padding:16px">
+            <div class="meta">Editorial portrait</div>
+            <div class="row" style="justify-content:space-between; align-items:center">
+              <div>
+                <div style="font-weight:700">Maleek Patterson</div>
+                <div class="meta">UX • Research • Human-Centered AI</div>
+              </div>
+              <div class="meta">Atlanta • Remote</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <div class="meta">Currently</div>
+          <h3 style="margin-top:10px">Building a portfolio that reads like a product.</h3>
+          <p class="meta" style="margin-top:10px">
+            Two flagship case studies: a clinical documentation system with supervised AI assistance, and a spin-detection app centered on explainability.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section">
+      <div class="container" style="padding:0">
+        <div class="meta">© <span id="y"></span> Maleek Patterson • maleekpatterson.com</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const isLight = document.documentElement.classList.contains('light');
+    const t = document.querySelector('.toggle');
+    if(t) t.checked = isLight;
+  </script>
+</body>
+</html>

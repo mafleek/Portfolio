@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>HEART Clinic | Maleek Patterson</title>
+  <meta name="description" content="AI-assisted clinical documentation system with live session tracking and supervised review."/>
+  <link rel="stylesheet" href="../assets/styles.css"/>
+  <script src="../assets/site.js" defer></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container nav">
+      <a class="brand" href="../index.html"><span class="dot" aria-hidden="true"></span><span>Maleek Patterson</span></a>
+      <div class="navlinks">
+        <a href="../index.html#work">Work</a>
+        <a href="../about.html">About</a>
+        <a href="../resume.html">Resume</a>
+        <a href="../index.html#contact">Contact</a>
+        <label class="row" style="gap:10px">
+          <span class="meta">Light</span>
+          <input class="toggle" type="checkbox" onchange="toggleTheme(this)" aria-label="Toggle light mode" />
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="kicker">HCD 501 • Human-Centered Design • University of Michigan–Flint</div>
+        <h1 class="title">HEART Clinic Documentation System</h1>
+        <p class="lede">A browser-based workflow that unifies live physiological tracking, structured session data, and AI-assisted SOAP documentation, with faculty oversight built in.</p>
+
+        <div class="row" style="gap:12px; flex-wrap:wrap; margin-top:18px">
+          <a class="button" href="https://resilient-otter-d9d647.netlify.app/" target="_blank" rel="noreferrer">View Prototype</a>
+          <a class="button secondary" href="../assets/downloads/HEART_Final_Prototype_Report.pdf" target="_blank" rel="noreferrer">Download Final Report (PDF)</a>
+          <a class="button secondary" href="../assets/downloads/HEART_User_Flows.pdf" target="_blank" rel="noreferrer">User Flows (PDF)</a>
+        </div>
+
+        <div class="grid2" style="margin-top:28px">
+          <div class="glass">
+            <div class="meta">Role</div>
+            <div style="margin-top:6px">UX Research • UX Design • Interaction Design • Responsible AI framing</div>
+            <div class="meta" style="margin-top:14px">Focus</div>
+            <div style="margin-top:6px">Clinical workflow clarity, cognitive load reduction, transparency of AI assistance, and safe supervisor review patterns.</div>
+          </div>
+          <div class="glass">
+            <div class="meta">Why it matters</div>
+            <div style="margin-top:6px">Student clinicians were stitching together Polar data, paper templates, Excel calculators, and Word docs. The system turns that chaos into a single guided flow, without turning AI into a black box.</div>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <h2 class="h2">Key screens</h2>
+        <div class="grid2" style="margin-top:14px">
+          <figure class="card">
+            <img class="shot" src="../assets/img/heart-live-session.png" alt="Live Session Tracking screen with SOAP tabs and live metrics"/>
+            <div class="pad">
+              <div class="meta">Live Session Tracking</div>
+              <div style="margin-top:6px">Real-time HR/HRV + signal quality, session timer, and SOAP note capture in one place.</div>
+            </div>
+          </figure>
+          <figure class="card">
+            <img class="shot" src="../assets/img/heart-session-data.png" alt="Session data entry form with pre/mid/post vitals"/>
+            <div class="pad">
+              <div class="meta">Structured session data</div>
+              <div style="margin-top:6px">Pre/mid/post vitals, RPE, activities, and contributing factors to HR changes.</div>
+            </div>
+          </figure>
+        </div>
+
+        <div class="hr"></div>
+
+        <h2 class="h2">What I shipped (as a prototype)</h2>
+        <ul class="list">
+          <li>Guided stepper flow: device connection → session setup → live session → review → note generation → submission.</li>
+          <li>AI assistance that’s visibly distinct from user-entered content, so “help” doesn’t masquerade as truth.</li>
+          <li>Faculty review experience designed for speed, clarity, and revision requests.</li>
+          <li>System status visibility (recording, syncing, autosave) to reduce uncertainty during live care.</li>
+        </ul>
+
+        <h2 class="h2" style="margin-top:26px">Artifacts</h2>
+        <div class="chips" style="margin-top:12px">
+          <a class="chip" href="../assets/downloads/HEART_Design_Problem_Statement.pdf" target="_blank" rel="noreferrer">Design problem statement</a>
+          <a class="chip" href="../assets/downloads/HEART_Competitive_Analysis.pdf" target="_blank" rel="noreferrer">Competitive analysis</a>
+          <a class="chip" href="../assets/downloads/HEART_Generative_Interviews_Personas.pdf" target="_blank" rel="noreferrer">Interviews + personas</a>
+          <a class="chip" href="../assets/downloads/HEART_Scenario_Storyboard.pdf" target="_blank" rel="noreferrer">Scenario + storyboard</a>
+          <a class="chip" href="../assets/downloads/HEART_Usability_Tests_Paper_Prototypes_V2.pdf" target="_blank" rel="noreferrer">Usability tests (paper)</a>
+          <a class="chip" href="../assets/downloads/HEART_Digital_Prototype_V2_Writeup_Revised.pdf" target="_blank" rel="noreferrer">Usability tests (digital)</a>
+          <a class="chip" href="../assets/downloads/HEART_Values_and_Politics.pdf" target="_blank" rel="noreferrer">Values + politics (ethics)</a>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="row" style="justify-content:space-between; flex-wrap:wrap">
+          <a class="meta" href="../index.html#work">← Back to Work</a>
+          <a class="meta" href="spinspotter.html">Next: SpinSpotter →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const isLight = document.documentElement.classList.contains('light');
+    const t = document.querySelector('.toggle');
+    if(t) t.checked = isLight;
+  </script>
+</body>
+</html>

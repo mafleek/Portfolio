@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>SpinSpotter | Maleek Patterson</title>
+  <meta name="description" content="Phrase-level spin detection with explainable AI: highlight, explain, rewrite."/>
+  <link rel="stylesheet" href="../assets/styles.css"/>
+  <script src="../assets/site.js" defer></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container nav">
+      <a class="brand" href="../index.html"><span class="dot" aria-hidden="true"></span><span>Maleek Patterson</span></a>
+      <div class="navlinks">
+        <a href="../index.html#work">Work</a>
+        <a href="../about.html">About</a>
+        <a href="../resume.html">Resume</a>
+        <a href="../index.html#contact">Contact</a>
+        <label class="row" style="gap:10px">
+          <span class="meta">Light</span>
+          <input class="toggle" type="checkbox" onchange="toggleTheme(this)" aria-label="Toggle light mode" />
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="container" style="padding-top:42px">
+      <div class="row" style="justify-content:space-between; align-items:flex-end; gap:18px; flex-wrap:wrap">
+        <div>
+          <div class="kicker">Work</div>
+          <h1 class="h1" style="margin:10px 0 10px">SpinSpotter</h1>
+          <p class="sub">Detecting framing bias at the phrase level, with explainable AI that teaches as it flags.</p>
+        </div>
+        <div class="row" style="gap:10px; flex-wrap:wrap">
+          <a class="button" href="https://wool-shred-49318596.figma.site/" target="_blank" rel="noreferrer">View Prototype</a>
+          <a class="button secondary" href="../assets/downloads/SpinSpotter_Final_Paper.pdf" target="_blank" rel="noreferrer">Download Paper (PDF)</a>
+          <a class="button ghost" href="https://www.canva.com/design/DAG6OKQK5MA/gcihaYh6JQ1KQTHhcEgbYA/view" target="_blank" rel="noreferrer">Slide Deck (Canva)</a>
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top:18px">
+        <div class="card">
+          <div class="kicker">Role</div>
+          <div style="font-size:16px; margin-top:6px">UX + strategy + research synthesis (team project)</div>
+          <div class="meta" style="margin-top:10px">Team: Powerpuffs • Course project</div>
+        </div>
+        <div class="card">
+          <div class="kicker">Why this exists</div>
+          <p style="margin:10px 0 0; line-height:1.6">
+            Most tools rate bias at the outlet level. SpinSpotter targets the quieter problem: phrasing that nudges interpretation
+            inside an otherwise “accurate” article.
+          </p>
+        </div>
+        <div class="card">
+          <div class="kicker">Core interactions</div>
+          <ul style="margin:10px 0 0; padding-left:18px; line-height:1.75">
+            <li>Highlight spin devices (loaded language, hyperbole, selective framing)</li>
+            <li>Explain why a phrase was flagged (XAI tooltip)</li>
+            <li>Suggest neutral rewrites</li>
+            <li>Compare coverage across sources</li>
+            <li>Learning module + accessibility controls</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid2" style="margin-top:20px">
+        <div class="card">
+          <div class="kicker">What to look at</div>
+          <p style="margin:10px 0 0; line-height:1.6">If you only have 60 seconds: open the prototype and click an article highlight. The “why” is the product.</p>
+          <div class="row" style="gap:10px; flex-wrap:wrap; margin-top:14px">
+            <a class="chip" href="../assets/downloads/SpinSpotter_Phase1A_Project_Description.docx" target="_blank" rel="noreferrer">Phase 1A</a>
+            <a class="chip" href="../assets/downloads/SpinSpotter_Phase3_Lofi_Prototypes.pdf" target="_blank" rel="noreferrer">Lo-fi concepts</a>
+            <a class="chip" href="../assets/downloads/SpinSpotter_Final_Paper.pdf" target="_blank" rel="noreferrer">Final paper</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="kicker">Next iterations</div>
+          <ul style="margin:10px 0 0; padding-left:18px; line-height:1.75">
+            <li>Integrate a preliminary NLP classifier (beyond mock results)</li>
+            <li>Run larger-scale usability study with diverse demographics</li>
+            <li>Turn the experience into a real browser extension workflow</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top:26px" class="card">
+        <div class="kicker">Recruiter-friendly summary</div>
+        <div class="meta" style="margin-top:8px">Problem → gap → concept → prototype → evaluation loop</div>
+        <p style="margin:12px 0 0; line-height:1.75">
+          SpinSpotter reframes “media bias tools” as a learning experience: not just labeling sources, but teaching users how bias is written.
+          The interface prioritizes transparency, control, and accessibility, so the AI feels like a lens, not a verdict.
+        </p>
+      </div>
+
+      <div class="row" style="justify-content:space-between; align-items:center; margin-top:28px; gap:10px; flex-wrap:wrap">
+        <a class="meta" href="../index.html#work">← Back to Work</a>
+        <a class="meta" href="heart-clinic.html">Next: HEART Clinic →</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container" style="padding:0">
+        <div class="meta">© <span id="y"></span> Maleek Patterson • maleekpatterson.com</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const isLight = document.documentElement.classList.contains('light');
+    const t = document.querySelector('.toggle');
+    if(t) t.checked = isLight;
+  </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Resume | Maleek Patterson</title>
+  <meta name="description" content="Resume for Maleek Patterson."/>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span><span>Maleek Patterson</span></a>
+      <div class="navlinks">
+        <a href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="resume.html" aria-current="page">Resume</a>
+        <a href="index.html#contact">Contact</a>
+        <label class="row" style="gap:10px">
+          <span class="meta">Light</span>
+          <input class="toggle" type="checkbox" onchange="toggleTheme(this)" aria-label="Toggle light mode" />
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="section">
+      <div class="grid" style="grid-template-columns: 1.1fr .9fr; align-items:start">
+        <div class="glass">
+          <h1 class="title">Resume</h1>
+          <p class="lead">Drop your PDF into <span class="tag">/assets/downloads/</span> and the embed below will just work.</p>
+
+          <div class="row" style="gap:12px; margin-top:16px; flex-wrap:wrap">
+            <a class="button" href="assets/downloads/Resume.pdf" target="_blank" rel="noreferrer">Download PDF</a>
+            <a class="button secondary" href="index.html#work">Back to Work</a>
+          </div>
+
+          <div style="margin-top:18px" class="divider"></div>
+          <div style="margin-top:18px" class="meta">Embedded viewer</div>
+          <div class="frame" style="margin-top:10px">
+            <iframe title="Resume PDF" src="assets/downloads/Resume.pdf" style="width:100%; height:78vh; border:0"></iframe>
+          </div>
+          <p class="meta" style="margin-top:10px">If the embed looks blank on mobile, the download link is the reliable fallback.</p>
+        </div>
+
+        <aside class="glass">
+          <div class="meta">Quick links</div>
+          <div style="margin-top:12px; display:flex; flex-direction:column; gap:10px">
+            <a class="chip" href="work/heart-clinic.html">HEART Clinic case study</a>
+            <a class="chip" href="work/spinspotter.html">SpinSpotter case study</a>
+            <a class="chip" href="assets/downloads/HEART_Final_Prototype_Report.pdf" target="_blank" rel="noreferrer">HEART final report (PDF)</a>
+            <a class="chip" href="assets/downloads/SpinSpotter_Final_Paper.pdf" target="_blank" rel="noreferrer">SpinSpotter final paper (PDF)</a>
+          </div>
+          <div style="margin-top:16px" class="divider"></div>
+          <p class="meta">Replace <span class="tag">Resume.pdf</span> with your real file name or keep it simple and name it exactly that.</p>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="section">
+      <div class="container" style="padding:0">
+        <div class="meta">© <span id="y"></span> Maleek Patterson • maleekpatterson.com</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const isLight = document.documentElement.classList.contains('light');
+    const t = document.querySelector('.toggle');
+    if(t) t.checked = isLight;
+  </script>
+</body>
+</html>
